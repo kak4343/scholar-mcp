@@ -1,0 +1,39 @@
+{
+  "name": "scholar-mcp",
+  "version": "0.1.0",
+  "description": "Unified MCP server for PubMed + arXiv + Semantic Scholar scholarly search",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "scholar-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc --watch",
+    "test": "node --test dist/tests/*.test.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "pubmed",
+    "arxiv",
+    "semantic-scholar",
+    "scholarly-search",
+    "claude",
+    "anthropic"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "fast-xml-parser": "^4.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
