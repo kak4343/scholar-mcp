@@ -1,7 +1,7 @@
 {
   "name": "scholar-mcp",
-  "version": "0.1.0",
-  "description": "Unified MCP server for PubMed + arXiv + Semantic Scholar scholarly search",
+  "version": "0.2.0",
+  "description": "Unified MCP server for PubMed + arXiv + Semantic Scholar scholarly search, with two-tier caching and Notion export.",
   "type": "module",
   "main": "dist/index.js",
   "bin": {
@@ -27,9 +27,13 @@
   "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",
-    "fast-xml-parser": "^4.5.0"
+    "@notionhq/client": "^2.3.0",
+    "better-sqlite3": "^12.10.0",
+    "fast-xml-parser": "^4.5.0",
+    "lru-cache": "^11.5.1"
   },
   "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
     "@types/node": "^22.0.0",
     "typescript": "^5.6.0"
   },
