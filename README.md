@@ -105,10 +105,10 @@ To wipe the on-disk cache: `rm -rf ~/.scholar-mcp/cache/`.
 
 Your Notion integration must be added to the target database (the integration's "Connections" must include that page). The schema above is intentionally compatible with the maintainer's personal Knowledge database (`data_source_id: 0a489d15-83e8-471d-ba1e-f04030473967`), so the same Notion DB can be populated by either `scholar-mcp` or by Python pipelines built around it.
 
-## API keys (optional, but recommended)
+## API keys
 
-- **PubMed**: free at https://www.ncbi.nlm.nih.gov/account/ — raises rate limit from 3 req/s to 10 req/s
-- **Semantic Scholar**: free at https://www.semanticscholar.org/product/api — raises rate limit
+- **PubMed** (optional): free at https://www.ncbi.nlm.nih.gov/account/ — raises rate limit from 3 req/s to 10 req/s
+- **Semantic Scholar** (**strongly recommended**): free at https://www.semanticscholar.org/product/api — without a key, requests share a global rate pool that is frequently saturated (HTTP 429). A personal key gives you a dedicated 1 req/s.
 - **arXiv**: no API key needed
 - **Notion**: free integration token at https://www.notion.so/profile/integrations — required only for `scholar_export_to_notion`
 
@@ -117,7 +117,7 @@ Set them via the environment variables `PUBMED_API_KEY`, `SEMANTIC_SCHOLAR_API_K
 ## Development
 
 ```bash
-git clone https://github.com/kakedashi-eyedoc/scholar-mcp
+git clone https://github.com/kak4343/scholar-mcp
 cd scholar-mcp
 npm install
 npm run build

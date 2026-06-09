@@ -113,17 +113,17 @@ Notion 側では integration を対象 DB に「接続」する必要がある (
 
 スキーマは作者個人の Knowledge DB (`data_source_id: 0a489d15-83e8-471d-ba1e-f04030473967`) と互換にしているので、同じ DB を `scholar-mcp` と既存 Python (例: 眼科週次レビューの `push_to_notion.py`) の両方から書き込める。
 
-## API キー (任意だが推奨)
+## API キー
 
-- **PubMed:** https://www.ncbi.nlm.nih.gov/account/ で無料発行、レート 3 req/s → 10 req/s
-- **Semantic Scholar:** https://www.semanticscholar.org/product/api で無料発行
+- **PubMed (任意):** https://www.ncbi.nlm.nih.gov/account/ で無料発行、レート 3 req/s → 10 req/s
+- **Semantic Scholar (強く推奨):** https://www.semanticscholar.org/product/api で無料発行。キー無しだと全世界共有 rate pool で頻繁に HTTP 429 が出る。個人キーで専用 1 req/s が得られる。
 - **arXiv:** API キー不要
 - **Notion:** https://www.notion.so/profile/integrations で無料発行、`scholar_export_to_notion` を使う場合のみ必須
 
 ## 開発
 
 ```bash
-git clone https://github.com/kakedashi-eyedoc/scholar-mcp
+git clone https://github.com/kak4343/scholar-mcp
 cd scholar-mcp
 npm install
 npm run build

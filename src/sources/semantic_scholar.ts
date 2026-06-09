@@ -1,7 +1,7 @@
 import type { SearchParams, SearchResult, SourceSearcher } from "../types.js";
 
 const BASE_URL = "https://api.semanticscholar.org/graph/v1";
-const USER_AGENT = "scholar-mcp/0.1.0 (https://github.com/kakedashi-eyedoc/scholar-mcp)";
+const USER_AGENT = "scholar-mcp/0.2.1 (https://github.com/kak4343/scholar-mcp)";
 const FIELDS = "title,authors,abstract,year,publicationDate,externalIds,citationCount,venue,url";
 
 export class SemanticScholarSearcher implements SourceSearcher {

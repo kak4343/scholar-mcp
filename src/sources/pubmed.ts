@@ -2,7 +2,7 @@ import { XMLParser } from "fast-xml-parser";
 import type { SearchParams, SearchResult, SourceSearcher } from "../types.js";
 
 const BASE_URL = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils";
-const USER_AGENT = "scholar-mcp/0.1.0 (https://github.com/kakedashi-eyedoc/scholar-mcp)";
+const USER_AGENT = "scholar-mcp/0.2.1 (https://github.com/kak4343/scholar-mcp)";
 
 export class PubMedSearcher implements SourceSearcher {
   private apiKey?: string;
