@@ -17,7 +17,7 @@ npm install -g scholar-mcp
 Or run via `npx` without install:
 
 ```bash
-npx scholar-mcp
+npx @kak4343/scholar-mcp
 ```
 
 ## Configure in Claude Desktop / Claude Code
@@ -27,7 +27,7 @@ npx scholar-mcp
   "mcpServers": {
     "scholar": {
       "command": "npx",
-      "args": ["scholar-mcp"],
+      "args": ["@kak4343/scholar-mcp"],
       "env": {
         "PUBMED_API_KEY": "optional, raises NCBI rate limit",
         "SEMANTIC_SCHOLAR_API_KEY": "optional, raises rate limit",

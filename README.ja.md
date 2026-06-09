@@ -19,7 +19,7 @@ npm install -g scholar-mcp
 または `npx` で都度起動:
 
 ```bash
-npx scholar-mcp
+npx @kak4343/scholar-mcp
 ```
 
 ## Claude Desktop / Claude Code への設定
@@ -29,7 +29,7 @@ npx scholar-mcp
   "mcpServers": {
     "scholar": {
       "command": "npx",
-      "args": ["scholar-mcp"],
+      "args": ["@kak4343/scholar-mcp"],
       "env": {
         "PUBMED_API_KEY": "任意、NCBI のレート上限を緩和",
         "SEMANTIC_SCHOLAR_API_KEY": "任意、レート上限を緩和",
