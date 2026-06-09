@@ -1,6 +1,6 @@
 {
   "name": "@kak4343/scholar-mcp",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Unified MCP server for PubMed + arXiv + Semantic Scholar scholarly search, with two-tier caching and Notion export.",
   "type": "module",
   "main": "dist/index.js",

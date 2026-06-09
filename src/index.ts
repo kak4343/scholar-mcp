@@ -26,7 +26,7 @@ interface CachedPayload {
 const searchCache = new SearchCache<CachedPayload>();
 
 const server = new Server(
-  { name: "scholar-mcp", version: "0.2.0" },
+  { name: "scholar-mcp", version: "0.3.1" },
   { capabilities: { tools: {} } }
 );
 
@@ -209,4 +209,4 @@ async function handleExportToNotion(args: {
 
 const transport = new StdioServerTransport();
 await server.connect(transport);
-console.error("[scholar-mcp] v0.2 running on stdio");
+console.error("[scholar-mcp] v0.3.1 running on stdio");
