@@ -13,7 +13,7 @@
 ## インストール
 
 ```bash
-npm install -g scholar-mcp
+npm install -g @kak4343/scholar-mcp
 ```
 
 または `npx` で都度起動:
@@ -21,6 +21,8 @@ npm install -g scholar-mcp
 ```bash
 npx @kak4343/scholar-mcp
 ```
+
+> **注意:** package は scope 付き (`@kak4343/`)。素の `scholar-mcp` 名は npm 上で別の OSS が既に取得済みのため、scope を必ず付ける。
 
 ## Claude Desktop / Claude Code への設定
 
@@ -138,11 +140,12 @@ node scripts/smoke_test.mjs
 
 ## ロードマップ
 
-- **v0.1:** 3 ソース横断 `scholar_search`
-- **v0.2 (現行):** 2 段キャッシュ + `scholar_export_to_notion`
-- **v0.3:** 日本語クエリの自動英訳 + 結果の日本語要約 (Anthropic Claude API 経由、optional)
-- **v0.4:** `scholar_get_related` (Semantic Scholar の引用グラフ)
-- **v0.5:** open access 論文の全文取得
+- **v0.1** (internal): 3 ソース横断 `scholar_search`
+- **v0.2** (internal): 2 段キャッシュ + `scholar_export_to_notion`
+- **v0.3.0** (現行、npm 初公開): `@kak4343/` scope 化、USER_AGENT / clone URL 修正、README 整備
+- **v0.4:** dedup 精度向上 (preprint ↔ 出版済みの紐付け)、日本語要約プロンプトを臨床医 triage 用に調整
+- **v0.5:** `scholar_get_related` (Semantic Scholar の引用グラフ)
+- **v0.6:** open access 論文の全文取得
 
 ## 法令・倫理上の注意
 

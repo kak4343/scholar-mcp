@@ -11,7 +11,7 @@ Existing MCP servers cover a single source (PubMed-only, arXiv-only). For clinic
 ## Install
 
 ```bash
-npm install -g scholar-mcp
+npm install -g @kak4343/scholar-mcp
 ```
 
 Or run via `npx` without install:
@@ -19,6 +19,8 @@ Or run via `npx` without install:
 ```bash
 npx @kak4343/scholar-mcp
 ```
+
+> **Note:** the package is scoped (`@kak4343/`) because the unscoped name `scholar-mcp` is already taken on npm by an unrelated package. If you see the wrong tool, double-check the scope.
 
 ## Configure in Claude Desktop / Claude Code
 
@@ -132,11 +134,12 @@ node scripts/smoke_test.mjs
 
 ## Roadmap
 
-- **v0.1**: `scholar_search` unified across 3 sources
-- **v0.2 (current)**: two-tier cache (LRU memory + SQLite disk), `scholar_export_to_notion`
-- **v0.3**: optional Japanese query auto-translation, Japanese abstract summarization (via Anthropic Claude API)
-- **v0.4**: `scholar_get_related` tool (Semantic Scholar citation graph)
-- **v0.5**: full-text retrieval for open-access papers
+- **v0.1** (internal): `scholar_search` unified across 3 sources
+- **v0.2** (internal): two-tier cache (LRU memory + SQLite disk), `scholar_export_to_notion`
+- **v0.3.0** (current, first public npm release): `@kak4343/` scope rename, USER_AGENT/clone-URL fixes, README polish
+- **v0.4**: dedup precision (preprint ↔ published linking), Japanese summary prompt tuning for clinical triage
+- **v0.5**: `scholar_get_related` tool (Semantic Scholar citation graph)
+- **v0.6**: full-text retrieval for open-access papers
 
 ## Legal / ethical notes
 
